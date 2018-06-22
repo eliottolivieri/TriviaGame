@@ -6,34 +6,96 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <title> Eliott's Trivia Game! </title>
 
 </head>
 
-<body>
+<html>
+        <body>
 
-    <p id="myCounter" >5</p>
+                <h1 class="jumbotron"> Welcome To Car Trivia</h1>
+                
+                <br>
 
-    <form >
-            <input type="radio" name="choice" value="Scripting"> Scripting
-            <input type="radio" name="choice" value="Programming"> Programming
-            <input type="radio" name="choice" value="Application"> Application
-            <input type="radio" name="choice" value="None of These"> None of These
-    </form>
-    <br>
-    <form >
-            <input type="radio" name="choice" value="Scripting"> Scripting
-            <input type="radio" name="choice" value="Programming"> Programming
-            <input type="radio" name="choice" value="Application"> Application
-            <input type="radio" name="choice" value="None of These"> None of These
-    </form>
-    <br>
-    <form >
-            <input type="radio" name="choice" value="Scripting"> Scripting
-            <input type="radio" name="choice" value="Programming"> Programming
-            <input type="radio" name="choice" value="Application"> Application
-            <input type="radio" name="choice" value="None of These"> None of These
-    </form>
-            <button onclick="submitAnswer()">Submit Answer</button> 
+                <p id="myCounter">You'll have 30 seconds to submit your answers</p>
+                
+                <br>
+                
+                <div class="container" id="scoreKeeper"style="display:none">                        
+                        <p id="myScore"></p>
+                        <p id="myRight"></p>
+                        <p id="myWrong" ></p>
+                </div>
+        
+                <br>
 
-</body>
+                <button onclick="startGame(),displayDiv()" class="btn btn-primary center-block" id="startButton"> Start Game </button>
+                
+                <br>
+                
+                <div class="container" id="questions" style="display:none">
+                        <p> Which car manufacturer was the first to use the fibonacci sequence to help design their vehicles?  </p>                       
+                        <form >
+                                <input type="radio" name="q1" id="Ferrari"  value="Ferrari"> Ferrari
+                                <input type="radio" name="q1"id="Ford"  value="Ford"> Ford
+                                <input type="radio" name="q1"id="Jaguar" value="Jaguar"> Jaguar
+                                <input type="radio" name="q1"id="Rolce"  value="Rolce-Royce"> Rolce-Royce
+                        </form>
+
+                        <br>
+
+                        <p> Which car currently holds the world record for top speed? </p>
+                        
+                        <form >
+                                <input type="radio" name="q2"id= "Agera" value="Agera"> Koenigsegg Agera RS
+                                <input type="radio" name="q2"id="Chiron" value="Chiron"> Bugatti Chiron
+                                <input type="radio" name="q2"id="VenomGT" value="VenomGT"> Henessy Venom GT
+                                <input type="radio" name="q2"id="NoneOfTheAbove" value="NoneOfTheAbove"> None of the above
+                        </form>
+                        
+                        <br>
+
+                        <p> Which of these cars has an engine which contains 5 valves per cylinder?</p>
+                        
+                        <form >
+                                <input type="radio" name="q3" id="F355" value="F355"> Ferrai 355
+                                <input type="radio"name="q3" id="Huracan" value="Huracan"> Lamborghini Huracan
+                                <input type="radio" name="q3"id="Viper" value="Viper"> Dodge Viper
+                                <input type="radio" name="q3"id="Civic" value="Civic"> Honda Civic
+                        </form>
+                        
+                        <br>
+
+                        <p> Which car manufacturer exclusively uses flat engines for their turbo vehicles?</p>
+
+                        <form >
+                                <input type="radio" name="q4"id="Porsche" value="Porsche"> Porsche
+                                <input type="radio"name="q4" id="Volvo" value="Volvo"> Volvo
+                                <input type="radio" name="q4"id="Subaru" value="Subaru"> Subaru
+                                <input type="radio" name="q4"id="Saab" value="Saab"> Saab
+                        </form>
+                        
+                        <br>
+                        
+                        <p> Which car manufacturer was the first to use double wishbone suspension to allow for steering returnability</p>
+
+                        <form >
+                                <input type="radio"name="q5" id="Porsche" value="Porsche"> Porsche
+                                <input type="radio" name="q5"id="Peugeot" value="Peugeot"> Peugeot
+                                <input type="radio" name="q5"id="Citroen" value="Citroen"> Citroen
+                                <input type="radio"name="q5" id="BMW" value="BMW"> BMW
+                        </form>
+                        
+                        <br>
+                </div>
+
+        </body>
+</html>
